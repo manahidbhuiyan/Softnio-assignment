@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .font-roboto {
+        font-family: 'Roboto', sans-serif;
+    }
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Centers vertically */
+    align-items: center; /* Centers horizontally */
+    min-height: 100vh; /* Ensures it takes full viewport height */
+    padding: 20px; /* Optional: Add padding to prevent overlap on smaller screens */
+    box-sizing: border-box; /* Include padding in height calculation */
+}
+
+/* size button select */
+.selected {
+  border-color: #6576ff !important;
+}
+.selected span:first-child {
+  color: #6576ff !important;
+}
+
+.parent {
+  max-width: 1330px;
+  margin: 80px auto;
+}
+
+.image-gallery img {
+  object-fit: cover;
+  display: none;
+}
+
+/* Hide all images by default */
+.image-gallery img {
+    display: none;
+}
+
+/* Display the active image */
+.image-gallery img.active-image {
+    display: block;
+}
+
+
+.color-circle.ring-2 {
+  border-color: var(--tw-ring-color);
+}
+
+.size-option.active-size {
+  background-color: #6576ff;
+  color: white;
+}
+
