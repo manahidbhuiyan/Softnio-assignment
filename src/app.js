@@ -38,3 +38,37 @@ sizeButtons.forEach((button) => {
         mainPrice.textContent = `$${price}`;
     });
 });
+
+// modal on off
+const checkoutButton = document.getElementById('checkout-button');
+const checkoutModal = document.getElementById('checkout-modal');
+const body = document.body;
+
+function getScrollbarWidth() {
+    return window.innerWidth - document.documentElement.clientWidth;
+}
+
+function showCheckout() {
+    // Calculate the scrollbar width
+    const scrollbarWidth = getScrollbarWidth();
+
+    // Add padding to the body and prevent scrolling
+    body.style.paddingRight = `${scrollbarWidth}px`;
+    body.style.overflow = 'hidden';
+
+    // Show the modal
+    checkoutButton.classList.add('hidden');
+    checkoutModal.classList.remove('hidden');
+    checkoutModal.classList.add('flex');
+}
+
+function hideCheckout() {
+    // Remove the padding and restore scrolling
+    body.style.paddingRight = '';
+    body.style.overflow = '';
+
+    // Hide the modal
+    checkoutModal.classList.add('hidden');
+    checkoutButton.classList.remove('hidden');
+    checkoutButton.classList.add('flex');
+}

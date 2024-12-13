@@ -10,7 +10,7 @@
 
 <body class="bg-white">
     <div
-        class="parent max-w-full lg:max-w-[1330px] w-full lg:max-h-[720px] mx-auto flex flex-col lg:flex-row justify-center items-center gap-[60px]">
+        class="parent max-w-full mx-auto lg:max-h-[720px] lg:max-w-[1330px] w-full flex flex-col lg:flex-row justify-center items-center gap-[60px]">
         <!-- Image Gallery -->
         <div class="image-gallery w-full h-full flex-1">
             <img src="./assets/images/product-gallery/purple.png" alt="purple" class="w-full h-full active-image">
@@ -63,12 +63,12 @@
                 <div id="color-picker" class="flex gap-6 my-4">
                     <div class="color-circle w-6 h-6 rounded-full bg-[#816BFF] ring-2 ring-[#816BFF] ring-offset-2 cursor-pointer"
                         data-color="#816BFF" data-image="purple"></div>
-                    <div class="color-circle w-6 h-6 rounded-full bg-[#1FCEC9] ring-[#1FCEC9] cursor-pointer" data-color="#1FCEC9"
-                        data-image="cyan"></div>
-                    <div class="color-circle w-6 h-6 rounded-full bg-[#4B97D3] ring-[#4B97D3] cursor-pointer" data-color="#4B97D3"
-                        data-image="blue"></div>
-                    <div class="color-circle w-6 h-6 rounded-full bg-[#3B4747] ring-[#3B4747] cursor-pointer" data-color="#3B4747"
-                        data-image="black"></div>
+                    <div class="color-circle w-6 h-6 rounded-full bg-[#1FCEC9] ring-[#1FCEC9] cursor-pointer"
+                        data-color="#1FCEC9" data-image="cyan"></div>
+                    <div class="color-circle w-6 h-6 rounded-full bg-[#4B97D3] ring-[#4B97D3] cursor-pointer"
+                        data-color="#4B97D3" data-image="blue"></div>
+                    <div class="color-circle w-6 h-6 rounded-full bg-[#3B4747] ring-[#3B4747] cursor-pointer"
+                        data-color="#3B4747" data-image="black"></div>
                 </div>
             </div>
 
@@ -89,20 +89,91 @@
         </div>
     </div>
 
-    <div class="sticky-footer w-full flex justify-center">
-        <button class="custom-button flex items-center justify-center gap-2 w-[139px] px-6 py-2 rounded-[20px] bg-[#FFBB5A] shadow-[0_0_15px_5px_rgba(0,0,0,0.1)]">
-            <span class="checkout-text text-[#364A63] font-roboto font-bold text-sm leading-[18px] tracking-[0.26px]">Checkout</span>
-            <span class="cart-badge flex items-center justify-center w-[19px] h-[20px] px-1.5 py-0.5 rounded-[5px] bg-white text-[#364A63] font-roboto font-bold text-xs leading-[16px] tracking-[0.26px]">2</span>
+    <!-- Main checkout button -->
+    <div id="checkout-button"
+        class="sticky-footer max-w-full mx-auto lg:max-h-[720px] lg:max-w-[1330px] w-full flex justify-center">
+        <button onclick="showCheckout()"
+            class="custom-button flex items-center justify-center gap-2 w-[139px] px-6 py-2 rounded-[20px] bg-[#FFBB5A] shadow-[0_0_15px_5px_rgba(0,0,0,0.1)]">
+            <span
+                class="checkout-text text-[#364A63] font-roboto font-bold text-sm leading-[18px] tracking-[0.26px]">Checkout</span>
+            <span
+                class="cart-badge flex items-center justify-center w-[19px] h-[20px] px-1.5 py-0.5 rounded-[5px] bg-white text-[#364A63] font-roboto font-bold text-xs leading-[16px] tracking-[0.26px]">2</span>
         </button>
-        
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="hidden fixed inset-0 bg-[#11121B8C] items-center justify-center">
+        <div class="checkout-modal max-w-[650px] w-full p-11 bg-white rounded-[20px]">
+            <div class="font-roboto font-bold text-[22px] leading-[24px] text-[#364A63] mb-3">Your Cart</div>
+            <table class="w-full border-collapse">
+                <tr class="border-b border-[#DBDFEA] pb-3">
+                    <th class="font-roboto font-normal text-[14px] leading-[23.1px] text-[#8091A7] text-left w-[52%]">
+                        Item</th>
+                    <th class="font-roboto font-normal text-[14px] leading-[23.1px] text-[#8091A7] text-center w-[12%]">
+                        Color</th>
+                    <th class="font-roboto font-normal text-[14px] leading-[23.1px] text-[#8091A7] text-center w-[12%]">
+                        Size</th>
+                    <th class="font-roboto font-normal text-[14px] leading-[23.1px] text-[#8091A7] text-center w-[12%]">
+                        Qty</th>
+                    <th class="font-roboto font-normal text-[14px] leading-[23.1px] text-[#8091A7] text-right w-[12%]">
+                        Price</th>
+                </tr>
+                <tr class="border-b border-[#DBDFEA]">
+                    <td class="flex items-center gap-2 py-4">
+                        <div class="w-9 h-9"><img src="./assets/images/thumbnail/image (1).png" alt="thumbnail-1"></div>
+                        <div class="font-roboto font-normal text-[14px] leading-[23.1px] text-[#364A63]">Classy Modern
+                            Smart Watch</div>
+                    </td>
+                    <td class="font-roboto font-normal text-[14px] text-center text-[#364A63] py-4">Black</td>
+                    <td class="font-roboto font-bold text-[14px] text-center text-[#364A63] py-4">XL</td>
+                    <td class="font-roboto font-bold text-[14px] text-center text-[#364A63] py-4">1</td>
+                    <td class="font-roboto font-bold text-[14px] text-right text-[#364A63] py-4">$99.00</td>
+                </tr>
+                <tr class="border-b border-[#DBDFEA]">
+                    <td class="flex items-center gap-2 py-4">
+                        <div class="w-9 h-9"><img src="./assets/images/thumbnail/image (2).png" alt="thumbnail-2"></div>
+                        <div class="font-roboto font-normal text-[14px] leading-[23.1px] text-[#364A63]">Elegant Analog
+                            Watch</div>
+                    </td>
+                    <td class="font-roboto font-normal text-[14px] text-center text-[#364A63] py-4">Purple</td>
+                    <td class="font-roboto font-bold text-[14px] text-center text-[#364A63] py-4">L</td>
+                    <td class="font-roboto font-bold text-[14px] text-center text-[#364A63] py-4">2</td>
+                    <td class="font-roboto font-bold text-[14px] text-right text-[#364A63] py-4">$178.00</td>
+                </tr>
+                <tr class="border-b border-[#DBDFEA]">
+                    <td class="flex items-center gap-2 py-4">
+                        <div class="w-9 h-9"><img src="./assets/images/thumbnail/image (3).png" alt="thumbnail-3"></div>
+                        <div class="font-roboto font-normal text-[14px] leading-[23.1px] text-[#364A63]">Stylish Digital
+                            Watch</div>
+                    </td>
+                    <td class="font-roboto font-normal text-[14px] text-center text-[#364A63] py-4">Cyan</td>
+                    <td class="font-roboto font-bold text-[14px] text-center text-[#364A63] py-4">M</td>
+                    <td class="font-roboto font-bold text-[14px] text-center text-[#364A63 py-4]">1</td>
+                    <td class="font-roboto font-bold text-[14px] text-right text-[#364A63] py-4">$79.00</td>
+                </tr>
+                <tr class="">
+                    <td class="font-roboto font-bold text-[16px] text-[#373737] pt-6">Total</td>
+                    <td></td>
+                    <td></td>
+                    <td class="font-roboto font-bold text-[14px] text-center text-[#364A63] pt-6">4</td>
+                    <td class="font-roboto font-bold text-[18px] text-right text-[#364A63] pt-6">$356.00</td>
+                </tr>
+            </table>
+
+            <!-- Bottom Buttons -->
+            <div class="flex justify-end gap-6 items-center pt-10">
+                <button onclick="hideCheckout()"
+                    class="bg-white border border-[#DBDFEA] rounded-[3px] py-2 px-[18px] font-bold text-[13px] text-[#364A63]">Continue
+                    Shopping</button>
+                <button
+                    class="bg-[#6576FF] rounded-[3px] py-2 px-[18px] font-bold text-[13px] text-white">Checkout</button>
+            </div>
+        </div>
     </div>
 
     <script src="./app.js"></script>
+
 </body>
 
 
 </html>
-
-
-
-
