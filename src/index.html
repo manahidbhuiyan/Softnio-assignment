@@ -10,9 +10,9 @@
 
 <body class="bg-white">
     <div
-        class="parent max-w-full mx-auto lg:max-h-[720px] lg:max-w-[1330px] w-full flex flex-col lg:flex-row justify-center items-center gap-[60px]">
+        class="parent max-w-full mx-auto mt-0 pb-4 lg:my-20 lg:max-h-[720px] lg:max-w-[1330px] w-full flex flex-col lg:flex-row justify-center items-center gap-[60px]">
         <!-- Image Gallery -->
-        <div class="image-gallery w-full h-full flex-1">
+        <div class="image-gallery w-full h-full md:flex-1">
             <img src="./assets/images/product-gallery/purple.png" alt="purple" class="w-full h-full active-image">
             <img src="./assets/images/product-gallery/cyan.png" alt="cyan" class="w-full h-full hidden">
             <img src="./assets/images/product-gallery/blue.png" alt="blue" class="w-full h-full hidden">
@@ -20,11 +20,11 @@
         </div>
 
         <!-- Product Details -->
-        <div class="product-details w-full lg:flex-1 flex flex-col justify-center items-start px-4">
-            <h2 class="title font-bold text-[40px] leading-[44px] text-[#364A63] mb-2">Classy Modern Smart Watch</h2>
+        <div class="product-details w-full lg:flex-1 flex flex-col justify-center items-start">
+            <h2 class="title font-bold text-[28px] sm:text-[32px] lg:text-[40px] leading-[44px] text-[#364A63] py-2 md:py-3">Classy Modern Smart Watch</h2>
 
             <!-- Review Stars -->
-            <div class="packs-star py-2 flex flex-row justify-start gap-1 items-center">
+            <div class="packs-star flex flex-row justify-start gap-1 items-center pb-1">
                 <img src="./assets/images/star/star-fill.png" alt="" class="w-[18px] h-[18px]" />
                 <img src="./assets/images/star/star-fill.png" alt="" class="w-[18px] h-[18px]" />
                 <img src="./assets/images/star/star-fill.png" alt="" class="w-[18px] h-[18px]" />
@@ -34,13 +34,13 @@
             </div>
 
             <!-- Price -->
-            <div class="my-3">
+            <div class="pt-3 md:pt-5">
                 <span class="font-normal text-xl leading-[30px] text-[#8091A7] line-through">$99.00</span>
                 <span id="main-price" class="ml-1 font-normal text-2xl leading-[30px] text-[#6576FF]">$79.00</span>
             </div>
 
             <!-- type and model -->
-            <div class="flex flex-row gap-10 my-5">
+            <div class="flex flex-row gap-10 pt-3 md:pt-5">
                 <div>
                     <h5 class="font-normal text-sm leading-[23px] text-[#8091A7]">Type</h5>
                     <h3 class="font-bold text-base text-[#364A63]">Watch</h3>
@@ -52,15 +52,15 @@
             </div>
 
             <!-- description -->
-            <div class="font-normal text-[18px] leading-[30px] text-[#8091A7]">
+            <div class="font-normal text-[18px] leading-[30px] text-[#8091A7] pt-3 md:pt-5">
                 I must explain to you how all this mistaken idea of denoun cing ple praising pain was born and I will
                 give you a complete account of the system, and expound the actual teaching.
             </div>
 
             <!-- Band Color -->
-            <div class="mb-5">
+            <div class="pt-3 md:pt-5">
                 <div class="font-bold text-lg leading-5 text-[#364A63]">Band Color</div>
-                <div id="color-picker" class="flex gap-6 my-4">
+                <div id="color-picker" class="flex gap-6 mt-4 mb-2">
                     <div class="color-circle w-6 h-6 rounded-full bg-[#816BFF] ring-2 ring-[#816BFF] ring-offset-2 cursor-pointer"
                         data-color="#816BFF" data-image="purple"></div>
                     <div class="color-circle w-6 h-6 rounded-full bg-[#1FCEC9] ring-[#1FCEC9] cursor-pointer"
@@ -73,7 +73,7 @@
             </div>
 
             <!-- Size Options -->
-            <div class="mb-5">
+            <div class="pt-3 md:pt-5">
                 <div class="font-bold text-lg leading-5 text-[#364A63] mb-3">Wrist Size</div>
                 <div id="size-button" class="flex gap-5">
                     <div class="size-option w-[73px] h-[36px] px-4 py-2 border rounded-md cursor-pointer flex justify-center items-center"
@@ -93,9 +93,9 @@
     <div id="checkout-button"
         class="sticky-footer max-w-full mx-auto lg:max-h-[720px] lg:max-w-[1330px] w-full flex justify-center">
         <button onclick="showCheckout()"
-            class="custom-button flex items-center justify-center gap-2 w-[139px] px-6 py-2 rounded-[20px] bg-[#FFBB5A] shadow-[0_0_15px_5px_rgba(0,0,0,0.1)]">
+            class="custom-button flex items-center justify-center gap-[10px] w-[139px] px-6 py-2 rounded-[20px] bg-[#FFBB5A] shadow-[0_0_15px_5px_rgba(0,0,0,0.1)]">
             <span
-                class="checkout-text text-[#364A63] font-roboto font-bold text-sm leading-[18px] tracking-[0.26px]">Checkout</span>
+                class="checkout-text text-[#364A63] font-roboto font-bold text-sm leading-[20px] tracking-[0.26px]">Checkout</span>
             <span
                 class="cart-badge flex items-center justify-center w-[19px] h-[20px] px-1.5 py-0.5 rounded-[5px] bg-white text-[#364A63] font-roboto font-bold text-xs leading-[16px] tracking-[0.26px]">2</span>
         </button>
@@ -170,6 +170,8 @@
             </div>
         </div>
     </div>
+
+    
 
     <script src="./app.js"></script>
 

@@ -3,15 +3,19 @@
 @tailwind utilities;
 
 @layer utilities {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
   body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Centers vertically */
-    align-items: center; /* Centers horizontally */
-    min-height: 100vh; /* Ensures it takes full viewport height */
-    padding: 20px; /* Optional: Add padding to prevent overlap on smaller screens */
-    box-sizing: border-box; /* Include padding in height calculation */
-    transition: padding-right 0.2s ease-in-out;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 20px;
   }
   .font-roboto {
     font-family: "Roboto", sans-serif;
@@ -23,11 +27,6 @@
   }
   .selected span:first-child {
     color: #6576ff !important;
-  }
-
-  .parent {
-    max-width: 1330px;
-    margin: 80px auto;
   }
 
   .image-gallery img {

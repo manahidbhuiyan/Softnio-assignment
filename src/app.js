@@ -50,7 +50,9 @@ function getScrollbarWidth() {
 
 function showCheckout() {
     // Calculate the scrollbar width
-    const scrollbarWidth = getScrollbarWidth();
+    const scrollbarWidth = getScrollbarWidth() + 20;
+
+    console.log("scrollbarWidth",scrollbarWidth)
 
     // Add padding to the body and prevent scrolling
     body.style.paddingRight = `${scrollbarWidth}px`;
