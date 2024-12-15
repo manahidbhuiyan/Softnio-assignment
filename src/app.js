@@ -21,15 +21,28 @@ colorCircles.forEach((circle) => {
 const sizeButtons = document.querySelectorAll(".size-option");
 const mainPrice = document.getElementById("main-price");
 
+  // Initialize the main price based on the active size
+  const updateMainPrice = (price) => {
+    mainPrice.textContent = `$${Number(price).toFixed(2)}`;
+  };
+
+    // Set default active price
+    const activeButton = document.querySelector(".size-option.active-size");
+    if (activeButton) {
+      updateMainPrice(activeButton.dataset.price);
+    }
+
 sizeButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
-    sizeButtons.forEach((btn) => btn.classList.remove("active-size"));
+     // Remove active class from all buttons
+     sizeButtons.forEach((btn) => btn.classList.remove("active-size"));
 
-    const selectedSize = e.target;
-    selectedSize.classList.add("active-size");
+     // Add active class to the clicked button
+     button.classList.add("active-size");
 
-    const price = Number(parseFloat(selectedSize.dataset.price).toFixed(2));
-    mainPrice.textContent = `$${price}`;
+     // Update price based on the clicked button
+     const price = button.dataset.price;
+     updateMainPrice(price);
   });
 });
 

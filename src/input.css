@@ -1,9 +1,15 @@
 /* Font Roboto */
-@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply flex flex-col justify-between items-center min-h-screen box-border p-5 font-roboto;
+  }
+}
 
 @layer components {
   * {
@@ -11,39 +17,21 @@
     padding: 0;
     box-sizing: border-box;
   }
-  body {
-    @apply flex flex-col justify-between items-center min-h-screen box-border p-5 font-roboto;
+  .custom-button {
+    @apply flex items-center justify-center gap-[10px] w-[139px] px-6 py-2 rounded-[20px] bg-[#FFBB5A] shadow-[0_0_15px_5px_rgba(0,0,0,0.1)];
   }
+
   .type-text {
     @apply font-normal text-sm leading-[23px] text-[#8091A7];
   }
-  .color-circle {
-    @apply w-6 h-6 rounded-full cursor-pointer;
-  }
-  .size-option {
-    @apply w-[73px] h-[36px] px-4 py-2 border rounded-md cursor-pointer flex justify-center items-center;
-  }
-  /* cart-details */
-  .table-head{
-    @apply font-normal text-[14px] leading-[23.1px] text-[#8091A7];
-  }
-  .column-text{
-    @apply text-[12px] sm:text-[14px] text-center text-[#364A63] py-4;
-  }
-  .column-text2{
-    @apply text-[12px] sm:text-[14px] text-[#364A63] py-4;
-  }
-  .column-title{
-    @apply font-normal text-[12px] sm:text-[14px] leading-4 sm:leading-[23.1px] text-[#364A63];
-  }
-}
-
-@layer utilities {
   .image-gallery img {
     @apply hidden;
   }
   .image-gallery img.active-image {
     @apply block;
+  }
+  .color-circle {
+    @apply w-6 h-6 rounded-full cursor-pointer;
   }
   .selected {
     @apply border-[#6576ff] text-[#6576ff];
@@ -54,10 +42,65 @@
   .selected span:first-child {
     @apply text-[#6576ff];
   }
-  .size-option.active-size {
-    @apply bg-[#6576ff] text-white;
+  .size-option {
+    @apply px-[18px] py-2 border border-[#DBDFEA] rounded-md cursor-pointer flex justify-center items-center gap-1;
   }
-  .custom-button {
-    @apply flex items-center justify-center gap-[10px] w-[139px] px-6 py-2 rounded-[20px] bg-[#FFBB5A] shadow-[0_0_15px_5px_rgba(0,0,0,0.1)];
+  .size-option.active-size {
+    @apply border-[#6576ff];
+  }
+  .size-name{
+    @apply font-bold text-[14px] left-5 tracking-[0.26px] text-[#364A63]
+  }
+  .size-price{
+    @apply font-bold text-[14px] left-5 tracking-[0.26px] text-[#364A63]
+  }
+  .size-option.active-size .size-name{
+    @apply text-[#6576FF];
+  }
+
+  /* cart-details */
+  .table-head {
+    @apply font-normal text-[14px] leading-[23.1px] text-[#8091A7] pt-1 pb-2;
+  }
+  .column-text {
+    @apply text-[12px] sm:text-[14px] text-center text-[#364A63] py-4;
+  }
+  .column-text2 {
+    @apply text-[12px] sm:text-[14px] text-[#364A63] py-4;
+  }
+  .column-title {
+    @apply font-normal text-[12px] sm:text-[14px] leading-4 sm:leading-[23.1px] text-[#364A63];
   }
 }
+
+@layer utilities {
+  .text-blue-gray{
+    color: #8091A7;
+  }
+  .text-blue-shade{
+    color: #6576FF;
+  }
+  .text-dark-slate-blue{
+    color: #364A63;
+  }
+  .border-soft-gray{
+    border-color: #DBDFEA;
+  }
+  .tracking-02 {
+    letter-spacing: 0.26px;
+  }
+  .leading-23{
+    line-height: 23.1px;
+  }
+
+  @screen lg-xl {
+    .image-gallery {
+      display: flex;
+      align-items: center;
+    }
+    .image-gallery img {
+      height: auto !important;
+    }
+  }
+}
+

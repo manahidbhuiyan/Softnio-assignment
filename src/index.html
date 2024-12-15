@@ -10,7 +10,7 @@
 
 <body class="bg-white">
     <div
-        class="parent max-w-full w-full mx-auto lg:max-h-[720px] lg:h-[720px] lg:max-w-[1330px] mt-0 pb-4 lg:my-20 flex flex-col lg:flex-row justify-center items-center gap-[30px] md:gap-[60px] flex-wrap overflow-hidden">
+        class="parent max-w-full w-full mx-auto lg:max-h-[720px] lg:h-[720px] lg:max-w-[1330px] mt-0 pb-4 lg:my-20 flex flex-col 2md:flex-row justify-center items-center gap-[30px] md:gap-[60px] flex-wrap overflow-hidden">
         <!-- Image Gallery -->
         <div class="image-gallery w-full h-full flex-1">
             <img src="./assets/images/product-gallery/purple.png" alt="purple" class="w-full h-full active-image">
@@ -20,9 +20,8 @@
         </div>
 
         <!-- Product Details -->
-        <div class="product-details w-full lg:flex-1 flex flex-col justify-center items-start md:px-4">
-            <h2
-                class="title font-bold text-[28px] sm:text-[32px] lg:text-[40px] leading-[44px] text-[#364A63] py-2 md:py-3">
+        <div class="product-details w-full 2md:flex-1 flex flex-col justify-center items-start 2md:px-4">
+            <h2 class="title font-bold text-[28px] sm:text-[32px] lg:text-[40px] leading-[44px] text-dark-slate-blue py-2 md:py-3">
                 Classy Modern Smart Watch</h2>
 
             <!-- Review Stars -->
@@ -32,37 +31,37 @@
                 <img src="./assets/images/star/star-fill.png" alt="full-star" class="w-[18px] h-[18px]" />
                 <img src="./assets/images/star/star-half-fill.png" alt="half-star" class="w-[18px] h-[18px]" />
                 <img src="./assets/images/star/star.png" alt="blank-star" class="w-[18px] h-[18px]" />
-                <span class="star-text text-sm leading-[23.1px] font-normal text-[#8091A7]">( 2 Reviews)</span>
+                <span class="star-text text-sm leading-23 font-normal text-blue-gray">( 2 Reviews)</span>
             </div>
 
             <!-- Price -->
             <div class="pt-3 md:pt-5">
-                <span class="font-normal text-xl leading-[30px] text-[#8091A7] line-through">$99.00</span>
-                <span id="main-price" class="ml-1 font-normal text-2xl leading-[30px] text-[#6576FF]">$79.00</span>
+                <span class="font-normal text-xl leading-[30px] text-blue-gray line-through">$99.00</span>
+                <span id="main-price" class="ml-1 font-normal text-2xl leading-[30px] text-blue-shade">$79.00</span>
             </div>
 
             <!-- type and model -->
             <div class="flex flex-row gap-10 pt-3 md:pt-5">
                 <div>
                     <h5 class="type-text">Type</h5>
-                    <h3 class="font-bold text-base text-[#364A63]">Watch</h3>
+                    <h3 class="font-bold text-base text-dark-slate-blue">Watch</h3>
                 </div>
                 <div>
                     <h5 class="type-text">Model Number</h5>
-                    <h3 class="font-bold text-base text-[#364A63]">Forerunner 290XT</h3>
+                    <h3 class="font-bold text-base text-dark-slate-blue">Forerunner 290XT</h3>
                 </div>
             </div>
 
             <!-- description -->
-            <div class="font-normal text-[18px] leading-[30px] text-[#8091A7] pt-3 md:pt-5">
+            <div class="font-normal text-[18px] leading-[30px] text-blue-gray pt-3 md:pt-5">
                 I must explain to you how all this mistaken idea of denoun cing ple praising pain was born and I will
                 give you a complete account of the system, and expound the actual teaching.
             </div>
 
             <!-- Band Color -->
             <div class="pt-3 md:pt-5">
-                <div class="font-bold text-lg leading-5 text-[#364A63]">Band Color</div>
-                <div id="color-picker" class="flex gap-6 mt-4 mb-2">
+                <div class="font-bold text-lg leading-5 text-dark-slate-blue">Band Color</div>
+                <div id="color-picker" class="flex gap-6 mt-4 mb-2 ml-1 2md:ml-0">
                     <div class="color-circle bg-[#816BFF] ring-2 ring-[#816BFF] ring-offset-2" data-color="#816BFF"
                         data-image="purple"></div>
                     <div class="color-circle bg-[#1FCEC9] ring-[#1FCEC9]" data-color="#1FCEC9" data-image="cyan"></div>
@@ -73,33 +72,73 @@
 
             <!-- Size Options -->
             <div class="pt-3 md:pt-5">
-                <div class="font-bold text-lg leading-5 text-[#364A63] mb-3">Wrist Size</div>
-                <div id="size-button" class="flex gap-5">
-                    <div class="size-option" data-price="69">$69</div>
-                    <div class="size-option active-size" data-price="79">$79</div>
-                    <div class="size-option" data-price="89">$89</div>
-                    <div class="size-option" data-price="99">$99</div>
+                <div class="font-bold text-lg leading-5 text-dark-slate-blue mb-3">Wrist Size</div>
+                <div id="size-button" class="flex gap-3">
+                    <div class="size-option" data-price="69">
+                        <span class="size-name">S</span>
+                        <span class="size-price">$69</span>
+                    </div>
+                    <div class="size-option active-size" data-price="79">
+                        <span class="size-name">M</span>
+                        <span class="size-price">$79</span>
+                    </div>
+                    <div class="size-option" data-price="89">
+                        <span class="size-name">L</span>
+                        <span class="size-price">$89</span>
+                    </div>
+                    <div class="size-option" data-price="99">
+                        <span class="size-name">XL</span>
+                        <span class="size-price">$99</span>
+                    </div>
                 </div>
             </div>
+
+             <!-- buy and cart option -->
+             <div class="flex justify-start gap-4 items-center pt-3 md:pt-5">
+                <!-- quantity -->
+                <div
+                    class="w-[130px] h-[36px] flex border border-soft-gray rounded-[4px] font-roboto text-[14px] font-normal leading-23 text-dark-slate-blue">
+                    <div class="w-[35px] flex items-center justify-center border-r border-soft-gray cursor-pointer">
+                        <img src="./assets/images/icon/7 D.svg" alt="" class="">
+                    </div>
+                    <div class="w-[60px] flex items-center justify-center border-r border-soft-gray font-normal text-[14px] leading-23 text-dark-slate-blue">
+                        0
+                    </div>
+                    <div class="w-[35px] flex items-center justify-center cursor-pointer">
+                        <img src="./assets/images/icon/3 M.svg" alt="" class="">
+                    </div>
+                </div>
+                <!-- cart add button -->
+                <button
+                    class="w-[110px] h-[36px] px-4 py-2 bg-[#6576FF] rounded-[3px] text-white text-[13px] font-bold leading-5 tracking-02 text-center hover:opacity-90 focus:outline-none">
+                    Add to Cart
+                </button>
+
+                <!-- whislist button -->
+                <img src="./assets/images/icon/heart.png" alt="heart-image" class="w-5 h-5 cursor-pointer">
+            </div>
+
         </div>
     </div>
 
     <!-- Main checkout button -->
     <div id="checkout-button" class="sticky-footer max-w-full mx-auto lg:max-w-[1330px] w-full flex justify-center">
-        <button onclick="showCheckout()" class="custom-button">
+        <button onclick="showCheckout()" class="custom-button  mt-4 md:m-0">
             <span
-                class="checkout-text text-[#364A63] font-bold text-sm leading-[20px] tracking-[0.26px]">Checkout</span>
+                class="checkout-text text-dark-slate-blue font-bold text-sm leading-[20px] tracking-02">Checkout</span>
             <span
-                class="cart-badge flex items-center justify-center w-[19px] h-[20px] px-1.5 py-0.5 rounded-[5px] bg-white text-[#364A63] font-bold text-xs leading-[16px] tracking-[0.26px]">2</span>
+                class="cart-badge flex items-center justify-center w-[19px] h-[20px] px-1.5 py-0.5 rounded-[5px] bg-white text-dark-slate-blue font-bold text-xs leading-[16px] tracking-02">2</span>
         </button>
     </div>
 
-    <!-- Checkout Modal -->
+    <!-- Modal Overlay -->
     <div id="checkout-modal" class="hidden fixed inset-0 bg-[#11121B8C] z-50 items-center justify-center">
+        <!-- Modal Content -->
         <div class="checkout-modal max-w-[650px] w-full p-5 md:p-11 bg-white rounded-[20px]">
-            <div class="font-bold text-[22px] leading-[24px] text-[#364A63] mb-3">Your Cart</div>
+            <div class="font-bold text-[22px] leading-[24px] text-dark-slate-blue mb-3">Your Cart</div>
+            <!-- product list table -->
             <table class="w-full border-collapse">
-                <tr class="border-b border-[#DBDFEA] pb-3">
+                <tr class="border-b border-soft-gray pb-3">
                     <th class="table-head text-left w-[52%]">
                         Item</th>
                     <th class="table-head text-center w-[12%]">
@@ -111,7 +150,7 @@
                     <th class="table-head text-right w-[12%]">
                         Price</th>
                 </tr>
-                <tr class="border-b border-[#DBDFEA]">
+                <tr class="border-b border-soft-gray">
                     <td class="flex items-center gap-2 py-4">
                         <div class="w-9 h-9"><img src="./assets/images/thumbnail/image (1).png" alt="thumbnail-1"></div>
                         <div class="column-title">Classy Modern Smart Watch</div>
@@ -119,9 +158,9 @@
                     <td class="font-normal column-text">Black</td>
                     <td class="font-bold column-text">XL</td>
                     <td class="font-bold column-text">1</td>
-                    <td class="font-bold text-[14px] text-right text-[#364A63] py-4">$99.00</td>
+                    <td class="font-bold text-[14px] text-right text-dark-slate-blue py-4">$99.00</td>
                 </tr>
-                <tr class="border-b border-[#DBDFEA]">
+                <tr class="border-b border-soft-gray">
                     <td class="flex items-center gap-2 py-4">
                         <div class="w-9 h-9"><img src="./assets/images/thumbnail/image (2).png" alt="thumbnail-2"></div>
                         <div class="column-title">Elegant Analog Watch</div>
@@ -131,7 +170,7 @@
                     <td class="font-bold column-text">2</td>
                     <td class="font-bold text-right column-text2">$178.00</td>
                 </tr>
-                <tr class="border-b border-[#DBDFEA]">
+                <tr class="border-b border-soft-gray">
                     <td class="flex items-center gap-2 py-4">
                         <div class="w-9 h-9"><img src="./assets/images/thumbnail/image (3).png" alt="thumbnail-3"></div>
                         <div class="column-title">Stylish Digital Watch</div>
@@ -145,15 +184,15 @@
                     <td class="font-bold text-[14px] sm:text-[16px] text-[#373737] pt-6">Total</td>
                     <td></td>
                     <td></td>
-                    <td class="font-bold text-center text-[12px] sm:text-[14px] text-[#364A63] pt-6">4</td>
-                    <td class="font-bold text-right text-[14px] sm:text-[18px] text-[#364A63] pt-6">$356.00</td>
+                    <td class="font-bold text-center text-[12px] sm:text-[14px] text-dark-slate-blue pt-6">4</td>
+                    <td class="font-bold text-right text-[14px] sm:text-[18px] text-dark-slate-blue pt-6">$356.00</td>
                 </tr>
             </table>
 
             <!-- Bottom Buttons -->
             <div class="flex justify-end gap-6 items-center pt-10">
                 <button onclick="hideCheckout()"
-                    class="bg-white border border-[#DBDFEA] rounded-[3px] py-2 px-[18px] font-bold text-[13px] text-[#364A63]">Continue
+                    class="bg-white border border-soft-gray rounded-[3px] py-2 px-[18px] font-bold text-[13px] text-dark-slate-blue">Continue
                     Shopping</button>
                 <button
                     class="bg-[#6576FF] rounded-[3px] py-2 px-[18px] font-bold text-[13px] text-white">Checkout</button>
