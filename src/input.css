@@ -52,10 +52,13 @@
     @apply font-bold text-[14px] left-5 tracking-[0.26px] text-[#364A63]
   }
   .size-price{
-    @apply font-bold text-[14px] left-5 tracking-[0.26px] text-[#364A63]
+    @apply font-normal text-[14px] left-5 tracking-[0.26px] text-[#364A63]
   }
   .size-option.active-size .size-name{
     @apply text-[#6576FF];
+  }
+  .size-option .size-price {
+    @apply text-[#364A63]; /* Price color remains the same */
   }
 
   /* cart-details */
@@ -103,4 +106,6 @@
     }
   }
 }
+
+
 
