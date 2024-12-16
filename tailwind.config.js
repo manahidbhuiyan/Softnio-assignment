@@ -1,6 +1,7 @@
 module.exports = {
   content: [
-    "./src/**/*.{html,js}",
+    "./src/**/*.{html,js}", // Keep the existing src path
+    "./*.{html,js}"         // Add the root directory path
   ],
   theme: {
     extend: {

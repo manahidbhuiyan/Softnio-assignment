@@ -8,12 +8,12 @@ const productData = {
   price: 69.00,
   star: 3.5,
   reviews: 2,
-  image: "./assets/images/product-gallery/purple.png",
+  image: "./src/assets/images/product-gallery/purple.png",
   colors: [
-    { name: "purple", image: "./assets/images/product-gallery/purple.png", color: '#816BFF' },
-    { name: "cyan", image: "./assets/images/product-gallery/cyan.png", color: '#1FCEC9' },
-    { name: "blue", image: "./assets/images/product-gallery/blue.png", color: '#4B97D3' },
-    { name: "black", image: "./assets/images/product-gallery/black.png", color: '#3B4747' },
+    { name: "purple", image: "./src/assets/images/product-gallery/purple.png", color: '#816BFF' },
+    { name: "cyan", image: "./src/assets/images/product-gallery/cyan.png", color: '#1FCEC9' },
+    { name: "blue", image: "./src/assets/images/product-gallery/blue.png", color: '#4B97D3' },
+    { name: "black", image: "./src/assets/images/product-gallery/black.png", color: '#3B4747' },
   ],
   sizes: [
     { name: "S", price: 69.00, previusPrice: 89.00 },
@@ -38,9 +38,9 @@ document.getElementById("main-image").src = productData.colors[0].image;
 const reviewsContainer = document.getElementById("reviews");
 
 const renderStars = (rating, reviewCount) => {
-  const fullStar = '<img src="./assets/images/star/star-fill.png" alt="full-star" class="w-[18px] h-[18px]">';
-  const halfStar = '<img src="./assets/images/star/star-half-fill.png" alt="half-star" class="w-[18px] h-[18px]">';
-  const blankStar = '<img src="./assets/images/star/star.png" alt="blank-star" class="w-[18px] h-[18px]">';
+  const fullStar = '<img src="./src/assets/images/star/star-fill.png" alt="full-star" class="w-[18px] h-[18px]">';
+  const halfStar = '<img src="./src/assets/images/star/star-half-fill.png" alt="half-star" class="w-[18px] h-[18px]">';
+  const blankStar = '<img src="./src/assets/images/star/star.png" alt="blank-star" class="w-[18px] h-[18px]">';
 
   const fullStars = Math.floor(rating);
   const hasHalfStar = rating % 1 >= 0.5;
