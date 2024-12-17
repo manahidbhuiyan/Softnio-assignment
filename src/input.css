@@ -58,7 +58,7 @@
     @apply text-[#6576FF];
   }
   .size-option .size-price {
-    @apply text-[#364A63]; /* Price color remains the same */
+    @apply text-[#364A63];
   }
 
   /* cart-details */
@@ -94,16 +94,6 @@
   }
   .leading-23{
     line-height: 23.1px;
-  }
-
-  @screen lg-xl {
-    .image-gallery {
-      display: flex;
-      align-items: center;
-    }
-    .image-gallery img {
-      height: auto !important;
-    }
   }
 }
 

@@ -666,7 +666,6 @@ body{
 .size-option .size-price{
   --tw-text-opacity: 1;
   color: rgb(54 74 99 / var(--tw-text-opacity, 1));
-  /* Price color remains the same */
 }
 
 /* cart-details */
@@ -1160,17 +1159,6 @@ body{
 
 .leading-23{
   line-height: 23.1px;
-}
-
-@media (min-width: 1024px) and (max-width: 1200px) {
-  .image-gallery {
-    display: flex;
-    align-items: center;
-  }
-
-  .image-gallery img {
-    height: auto !important;
-  }
 }
 
 .focus\:outline-none:focus{
