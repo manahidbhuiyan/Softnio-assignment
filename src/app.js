@@ -178,7 +178,14 @@ addToCartButton.addEventListener("click", () => {
     quantityDisplay.textContent = quantity;
     updateCart();
   }else{
-    alert("You need to add minimum 1 quantity")
+    Toastify({
+      text: "You need to add atleast 1 quantity!",
+      duration: 1000,
+      gravity: "top",
+      position: "center",
+      backgroundColor: "rgb(101 118 255 / var(--tw-bg-opacity, 1))",
+      stopOnFocus: true,
+    }).showToast();
   }
 });
 
